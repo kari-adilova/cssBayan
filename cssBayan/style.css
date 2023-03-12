@@ -7,3 +7,82 @@ body {
     position: static;
     background-color: #fef9c7;
 }
+.wrapper {
+    max-width: 50vw;
+    margin: 0 auto;
+    background-color: #fef9c7;
+}
+.accordion-name {
+    padding: 1vh 1vw;
+    font-size: 3vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    color: rgb(56, 55, 55);
+}
+.accordion {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vh;
+}
+.icon {
+    display: none;
+    width: 1vw;
+    height: 1vh;
+}
+.accordion-item {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 1vh 1vw;
+    cursor: pointer;
+    border-top: 0.05vh solid;
+}
+.accordion-title {
+    display: flex;
+    justify-content: space-between;
+}
+.title-name {
+    font-size: 2vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    color: rgb(102, 100, 100);
+}
+.accordion-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 1vh;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+.accordion-img {
+    width: 30vw;
+    object-fit: cover;
+    cursor: pointer;
+}
+input:checked + .accordion-item {
+    color: rgb(71, 24, 116);
+}
+input:checked + .accordion-item .icon {
+    transform: rotate(45deg);
+}
+input:checked + .accordion-item .accordion-content {
+    max-height: 100vh;
+    transition: max-height 0.5s ease-in-out;
+}
+.accordion-item:hover .accordion-content {
+    max-height: 100vh;
+    transition: max-height 0.5s ease-in-out;
+}
+.accordion-item:hover .icon {
+    transform: rotate(45deg);
+    transition: 0.5s ease-in-out;
+}
+.accordion-item:hover {
+    transition: 0.5s ease-in-out;
+    color: rgb(71, 24, 116);
+}
+.wrapper:hover .icon {
+    display: flex;
+    transition: 0.5s ease-in-out;
+}
