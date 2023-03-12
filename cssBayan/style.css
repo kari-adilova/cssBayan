@@ -60,7 +60,7 @@ body {
     object-fit: cover;
     cursor: pointer;
 }
-input:checked + .accordion-item {
+input:checked + .accordion-item .accordion-title .title-name {
     color: rgb(71, 24, 116);
 }
 input:checked + .accordion-item .icon {
@@ -78,9 +78,9 @@ input:checked + .accordion-item .accordion-content {
     transform: rotate(45deg);
     transition: 0.5s ease-in-out;
 }
-.accordion-item:hover {
-    transition: 0.5s ease-in-out;
+.accordion-item:hover .title-name {
     color: rgb(71, 24, 116);
+    transition: 1.5s;
 }
 .wrapper:hover .icon {
     display: flex;
