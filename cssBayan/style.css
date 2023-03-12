@@ -58,7 +58,6 @@ body {
 .accordion-img {
     width: 30vw;
     object-fit: cover;
-    cursor: pointer;
 }
 input:checked + .accordion-item .accordion-title .title-name {
     color: rgb(71, 24, 116);
@@ -85,4 +84,18 @@ input:checked + .accordion-item .accordion-content {
 .wrapper:hover .icon {
     display: flex;
     transition: 0.5s ease-in-out;
+}
+
+@media (min-width: 820px) {
+    .accordion-item {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 1vw 1vh;
+        border-top: 0.05vh solid;
+    }
+    a:hover {
+        text-decoration: none;
+        color: inherit;
+    }
 }
