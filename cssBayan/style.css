@@ -94,8 +94,7 @@ input:checked + .accordion-item .accordion-content {
         padding: 1vw 1vh;
         border-top: 0.05vh solid;
     }
-    a:hover {
-        text-decoration: none;
-        color: inherit;
+    *:hover {
+        pointer-events: none;
     }
 }
